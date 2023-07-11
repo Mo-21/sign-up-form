@@ -1,0 +1,131 @@
+
+* {
+    font-family: poppins-font;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: poppins-font;
+    src: url(./assets/poppins/Poppins-Regular.ttf);
+}
+  
+
+:root {
+    --titles-color: white;
+    --color-base-bg: rgb(18, 18, 18);
+    --color-base-text: rgb(240, 240, 240);
+}
+
+body {
+    background-color: var(--color-base-bg);
+    color: var(--color-base-text);
+}
+
+.main-container{
+    display: flex;
+    
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+    border: 3px solid white;
+    width: min(70%, 400px);
+    margin: auto;
+    border-radius: 8px;
+} 
+
+.side-img {
+    background-image: linear-gradient(45deg, #0887a3, #a750d3, #f64f59);
+    width: 40vw;
+    height: 100vh;
+    position: relative;
+}
+
+.card-body {
+    background-color: rgba(254, 254, 254, 0.233);
+    color: black;
+    position: absolute;
+    width: 100%;
+    top: 20%;
+    text-align: center;
+    height: 250px;
+}
+
+span {
+    display: block;
+    font-size: 1.9rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 40px;
+}
+
+.logo {
+    position: relative;
+    margin-top: 55px;
+    width: 100px;
+    height: 100px;
+    transform: scale(2);
+}
+
+.main {
+    margin-left: -50px;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    margin: 100px;
+    margin-top: 150px;
+    font-size: 2.5rem;
+}
+
+.title {
+    margin: 20px;
+    padding: 12px;
+}
+
+input {
+    width: max(20%, 300px);
+    border: 5px solid white;
+    border-radius: 8px;
+    height: 25px;
+}
+
+input:focus {
+    border: 5px solid skyblue;
+}
+
+.submit-button {
+    background-image: linear-gradient(45deg, #0887a3, #a750d3, #f64f59);
+    color: white;
+    margin: 20px;
+    padding: 12px;
+    height: 4rem;
+    width: 7rem;
+    margin-left: 32px;
+    font-weight: bold;
+    font-size: 1.25rem;
+    border-radius: 8px;
+}
+
+.submit-button:hover {
+    background-image: linear-gradient(45deg, #18b2d4, #9c22da, #c9212c);
+}
+
+.section-header {
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    margin: 15px;
+    margin-left: 40px;
+    
+}
+
+label {
+    display: block;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="main-container">
+        <div class="side-img">
+            <div class="card-body">
+                <img src="/assets/codesandbox.svg" alt="logo" class="logo">
+                <span>Big Box</span> 
+            </div>
+        </div>
+    
+        <div class="sub-container">
+            <h1 class="header">I know You Liked The Design, Join us Now!</h1>
+            <div class="container">
+                <form class="main" action="https://httpbin.org/post" method="post">
+                    <div class="section-header">Let's Go</div>
+
+                    <div class="title">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="client_username" required>
+                    </div>
+
+                    <div class="title">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="client_email" required>
+                    </div>
+
+                    <div class="title">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="client_password" placeholder="Password must contain UpperCase, LowerCase, Number/SpecialChar and min 8 Chars" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
+                    </div>
+
+                    <div class="title">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" id="confirm-password" name="client_password_confirmation" required>
+                    </div>
+
+                    <button type="submit" class="submit-button">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
