@@ -34,12 +34,14 @@
 
                     <div class="title">
                         <label for="password">Password</label>
-                        <input type="password" id="password" name="client_password" placeholder="Password must contain UpperCase, LowerCase, Number/SpecialChar and min 8 Chars" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
+                        <div class="place-holder">Password must contain UpperCase, LowerCase, Number/SpecialChar and min 8 Chars</div>
+                        <input type="password" id="password" name="client_password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
                     </div>
 
                     <div class="title">
                         <label for="confirm-password">Confirm Password</label>
                         <input type="password" id="confirm-password" name="client_password_confirmation" required>
+                        <span id="password-match-message"></span>
                     </div>
 
                     <button type="submit" class="submit-button">Submit</button>
@@ -48,4 +50,25 @@
         </div>
     </div>
 </body>
+
+<script>
+
+    const password1Input = document.getElementById("password");
+    const password2Input = document.getElementById("confirm-password");
+    const passwordMatchMessage = document.getElementById("password-match-message");
+    
+    function checkPasswordMatch() {
+    if (password1Input.value === password2Input.value) {
+      passwordMatchMessage.textContent = 'Passwords match.';
+      passwordMatchMessage.classList.add('match-message');
+      passwordMatchMessage.classList.remove('not-match-message');
+    } else {
+      passwordMatchMessage.textContent = 'Passwords do not match.';
+      passwordMatchMessage.classList.add('not-match-message');
+    }
+    }
+
+    password2Input.addEventListener('input', checkPasswordMatch);
+
+</script>
 </html>
